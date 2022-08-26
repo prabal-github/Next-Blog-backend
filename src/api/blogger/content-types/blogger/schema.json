@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bloggers",
+  "info": {
+    "singularName": "blogger",
+    "pluralName": "bloggers",
+    "displayName": "Blogger"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "blogger"
+    }
+  }
+}
